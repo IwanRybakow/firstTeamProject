@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleField", "BattleField\BattleField.csproj", "{B6CF0055-E139-4D8D-A249-715198DC97A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomSolution", "RandomSolution\RandomSolution.csproj", "{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tictactoe", "Tictactoe\Tictactoe.csproj", "{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
