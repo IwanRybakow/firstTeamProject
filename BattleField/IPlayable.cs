@@ -8,7 +8,8 @@ namespace BattleField
 {
     public interface IPlayable
     {
-        int Identificator { get; set; }
-        int[] NextMove(int[,] currentState);
+        byte Identificator { get; set; }
+        string Name { get; set; }
+        byte[] NextMove(byte[,] currentState, byte[] OppMove);
     }
 }

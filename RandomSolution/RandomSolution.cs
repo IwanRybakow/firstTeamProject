@@ -9,19 +9,21 @@ namespace RandomSolution
 {
     public class RandSolution : IPlayable
     {
-        public RandSolution(int fieldSize, int maxInLine)
+        public RandSolution(byte fieldSize, byte maxInLine)
         {
             this.fieldSize = fieldSize;
             this.maxInRow = maxInLine;
         }
-        public int Identificator { get; set; }
-        private int fieldSize;
-        private int maxInRow;
+        public byte Identificator { get; set; }
+        public string Name { get; set; }
 
-        public int[] NextMove(int[,] currentState)
+        private byte fieldSize;
+        private byte maxInRow;
+
+        public byte[] NextMove(byte[,] currentState, byte[] OppMOve)
         {
             int value = 9;
-            int[] guess = new int[2];
+            byte[] guess = new byte[2];
             while (value != 0)
             {
                 guess = pickRandom();
@@ -32,10 +34,10 @@ namespace RandomSolution
 
         }
 
-        private int[] pickRandom()
+        private byte[] pickRandom()
         {
             System.Random rnd = new System.Random();
-            return new int[] { rnd.Next(0, fieldSize), rnd.Next(0, fieldSize) };
+            return new byte[] { (byte)rnd.Next(0, fieldSize), (byte)rnd.Next(0, fieldSize) };
         }
     }
 }
