@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleField", "BattleField\BattleField.csproj", "{B6CF0055-E139-4D8D-A249-715198DC97A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomSolution", "RandomSolution\RandomSolution.csproj", "{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tictactoe", "Tictactoe\Tictactoe.csproj", "{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm", "Algorithm\Algorithm.csproj", "{587B7C1B-0494-4B4E-B245-82809F6AB8D0}"
@@ -16,6 +14,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedMiniMax", "MultiThreadedMiniMax\MultiThreadedMiniMax.csproj", "{AD005279-56EA-4137-A60E-444ED571DFA5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMaxSolution", "MiniMaxSolution\MiniMaxSolution.csproj", "{5A9445DA-1219-4F0D-99CD-FAE857E994B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmReworked", "AlgorithmReworked\AlgorithmReworked.csproj", "{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMaxSolutionReworked", "MiniMaxSolutionReworked\MiniMaxSolutionReworked.csproj", "{C95103E0-D983-4CDE-A175-8CB38904CF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedMiniMaxReworked", "MultiThreadedMiniMaxReworked\MultiThreadedMiniMaxReworked.csproj", "{24259468-A462-4764-AFEE-ED6F06F94964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,6 @@ Global
 		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6CF0055-E139-4D8D-A249-715198DC97A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F373FBE7-1F02-4ADC-AC64-22B68E4F3CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +51,18 @@ Global
 		{5A9445DA-1219-4F0D-99CD-FAE857E994B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A9445DA-1219-4F0D-99CD-FAE857E994B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A9445DA-1219-4F0D-99CD-FAE857E994B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95103E0-D983-4CDE-A175-8CB38904CF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95103E0-D983-4CDE-A175-8CB38904CF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95103E0-D983-4CDE-A175-8CB38904CF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95103E0-D983-4CDE-A175-8CB38904CF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24259468-A462-4764-AFEE-ED6F06F94964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24259468-A462-4764-AFEE-ED6F06F94964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24259468-A462-4764-AFEE-ED6F06F94964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24259468-A462-4764-AFEE-ED6F06F94964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

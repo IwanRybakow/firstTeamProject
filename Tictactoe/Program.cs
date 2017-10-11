@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BattleField;
-using RandomSolution;
 using MiniMaxSolution;
 using HumanPlayer;
 
@@ -26,10 +25,10 @@ namespace Tictactoe
             }
             else
             {
-                p1 = new MiniMaxPlayer(field, win, (byte)1);
+                p1 = new MiniMaxPlayer(0);
             }
 
-            IPlayable p2 = new MiniMaxPlayer(field, win, (byte)2);
+            IPlayable p2 = new MiniMaxPlayer(6);
             Game game = new Game(field, win, p1, p2);
             game.StartGame();
             Console.ReadKey();

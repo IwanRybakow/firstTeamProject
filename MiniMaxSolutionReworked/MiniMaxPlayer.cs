@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BattleField;
-using MultiThreadedMiniMax;
+using MultiThreadedMiniMaxReworked;
 
-namespace MiniMaxSolution
+namespace MiniMaxSolutionReworked
 {
     public class MiniMaxPlayer : IPlayable
     {

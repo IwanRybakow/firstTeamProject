@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniMaxSolution
+namespace MCSTsolution
 {
     class Board
     {
@@ -61,11 +61,11 @@ namespace MiniMaxSolution
                 {
                     continue;
                 }
-                int x0 = Math.Max(0, point.Row - searchRange), x1 = Math.Min(bLength - 1, point.Row + searchRange);
-                int y0 = Math.Max(0, point.Column - searchRange), y1 = Math.Min(bLength - 1, point.Column + searchRange);
+                int x0 = Math.Max(0, point.Row - searchRange), x1 = Math.Min(bLength, point.Row + searchRange);
+                int y0 = Math.Max(0, point.Column - searchRange), y1 = Math.Min(bLength, point.Column + searchRange);
                 for (int i = x0; i <= x1; i++)
                 {
-                    for (int j = y0; j <= y1; j++)
+                    for (int j = y0; i <= y1; i++)
                     {
                         MapPoint p = board[i, j];
                         if (p.Value == CellValue.EmptyCell)

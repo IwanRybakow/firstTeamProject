@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Algorithm
 {
-    public class PatternUtils
+    public class PatternCollection
     {
         public List<Pattern> PatternList;
-        public PatternUtils(int signsInRowToWin, int ownSign)
+        public PatternCollection(int signsInRowToWin, int ownSign)
         {
             int OppSign = ownSign == 1 ? 2 : 1;
             PatternList = new List<Pattern>();
@@ -20,7 +20,7 @@ namespace Algorithm
             PatternList.Add(victory);
 
             // XXXXX
-            Pattern oppVictory = new Pattern(-1600000000);
+            Pattern oppVictory = new Pattern(1600000000);
             oppVictory.PatternStringBuilder.Append(OppSign.ToString()[0], signsInRowToWin);
             PatternList.Add(oppVictory);
 
@@ -32,7 +32,7 @@ namespace Algorithm
             PatternList.Add(oneAwayDouble);
 
             // 0XXXX0
-            Pattern oppOneAwayDouble = new Pattern(-20000000);
+            Pattern oppOneAwayDouble = new Pattern(20000000);
             oppOneAwayDouble.PatternStringBuilder.Append('0');
             oppOneAwayDouble.PatternStringBuilder.Append(OppSign.ToString()[0], signsInRowToWin - 1);
             oppOneAwayDouble.PatternStringBuilder.Append('0');
@@ -46,7 +46,7 @@ namespace Algorithm
             PatternList.Add(twoAwayDouble);
 
             // 0XXX0
-            Pattern oppTwoAwayDouble = new Pattern(-2200000);
+            Pattern oppTwoAwayDouble = new Pattern(2200000);
             oppTwoAwayDouble.PatternStringBuilder.Append('0');
             oppTwoAwayDouble.PatternStringBuilder.Append(OppSign.ToString()[0], signsInRowToWin - 2);
             oppTwoAwayDouble.PatternStringBuilder.Append('0');
@@ -56,7 +56,7 @@ namespace Algorithm
             for (int i = 0; i < signsInRowToWin; i++)
             {
                 Pattern oneAway = new Pattern(4000000);
-                Pattern oppOneAway = new Pattern(-3500000);
+                Pattern oppOneAway = new Pattern(3500000);
                 for (int j = 0; j < signsInRowToWin; j++)
                 {
                     char c = i == j ? '0' : ownSign.ToString()[0];
@@ -72,7 +72,7 @@ namespace Algorithm
             for (int i = 0; i < signsInRowToWin-1; i++)
             {
                 Pattern oneAway = new Pattern(1500000);
-                Pattern oppOneAway = new Pattern(-1300000);
+                Pattern oppOneAway = new Pattern(1300000);
                 for (int j = 0; j < signsInRowToWin-1; j++)
                 {
                     string c = i == j ? "00" : ownSign.ToString();
@@ -96,7 +96,7 @@ namespace Algorithm
                 PatternList.Add(threeAwayTwoLeftOneRight);
 
                 // 00XX0
-                Pattern oppTthreeAwayTwoLeftOneRight = new Pattern(-30000);
+                Pattern oppTthreeAwayTwoLeftOneRight = new Pattern(30000);
                 oppTthreeAwayTwoLeftOneRight.PatternStringBuilder.Append('0');
                 oppTthreeAwayTwoLeftOneRight.PatternStringBuilder.Append('0');
                 oppTthreeAwayTwoLeftOneRight.PatternStringBuilder.Append(OppSign.ToString()[0], signsInRowToWin - 2);
@@ -112,7 +112,7 @@ namespace Algorithm
                 PatternList.Add(threeAwayTwoRightOneLeft);
 
                 // 00XX0
-                Pattern oppThreeAwayTwoRightOneLeft = new Pattern(-30000);
+                Pattern oppThreeAwayTwoRightOneLeft = new Pattern(30000);
                 oppThreeAwayTwoRightOneLeft.PatternStringBuilder.Append('0');
                 oppThreeAwayTwoRightOneLeft.PatternStringBuilder.Append(OppSign.ToString()[0], signsInRowToWin - 3);
                 oppThreeAwayTwoRightOneLeft.PatternStringBuilder.Append('0');

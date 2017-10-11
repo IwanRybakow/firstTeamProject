@@ -10,11 +10,11 @@ namespace BattleField
     {
         private int fieldSize;
         private byte[,] board;
-        private int goal;
+        private byte goal;
         private IPlayable[] PlayersArray;
         private int movesCount = 0;
 
-        public Game(int size, int max, IPlayable first, IPlayable second)
+        public Game(int size, byte max, IPlayable first, IPlayable second)
         {
             fieldSize = size;
             goal = max;
@@ -184,7 +184,7 @@ namespace BattleField
 
         public byte[] AddTurn(IPlayable player, byte[] oppMove)
         {
-            byte[] newTurn = player.NextMove((byte[,])board.Clone(), oppMove);
+            byte[] newTurn = player.NextMove((byte[,])board.Clone(), goal);
             byte currentValueOfCell = board[newTurn[0], newTurn[1]];
 
             if (currentValueOfCell != 0)

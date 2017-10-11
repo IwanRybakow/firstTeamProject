@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using BattleField;
 using MultiThreadedMiniMax;
 
-namespace MiniMaxSolution
+namespace MCSTsolution
 {
-    public class MiniMaxPlayer : IPlayable
+    public class MCSTplayer: IPlayable
     {
         Board board;
         private byte fieldSize;
@@ -19,14 +19,14 @@ namespace MiniMaxSolution
         public byte Identificator { get; set; }
 
 
-        public MiniMaxPlayer(int depth)
+        public MCSTplayer(int depth)
         {
             this.depth = depth;
         }
 
         public byte[] NextMove(byte[,] currentState, byte maxInRow)
         {
-            
+
             if (!isGameStarted) //initialization if first move
             {
                 bool isFirstMove = true;
@@ -37,7 +37,7 @@ namespace MiniMaxSolution
                 {
                     for (byte j = 0; j < fieldSize; j++)
                     {
-                        if (currentState[i,j]!=0)
+                        if (currentState[i, j] != 0)
                         {
                             board[i, j].Value = CellValue.OppCell;
                             isFirstMove = false;
@@ -56,7 +56,7 @@ namespace MiniMaxSolution
             {
                 for (byte j = 0; j < fieldSize; j++)
                 {
-                    if (currentState[i, j] != 0 && board[i, j].Value == CellValue.EmptyCell)
+                    if (currentState[i, j] != 0 && board[i, j].Value != CellValue.EmptyCell)
                     {
                         board[i, j].Value = CellValue.OppCell;
                     }
@@ -64,10 +64,10 @@ namespace MiniMaxSolution
             }
             HashSet<byte[]> moves = board.GetMoves();
             byte[] result = Solver.GetOptimalStep(board.ByteBoard(), moves, depth);
-            Console.WriteLine("Cell {0} {1}", result[0], result[1]);
             board[result[0], result[1]].Value = CellValue.OwnCell;
-            return result;            
+            return result;
         }
     }
 }
+
 

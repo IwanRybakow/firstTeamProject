@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
-using Algorithm;
+using AlgorithmReworked;
 
-namespace MultiThreadedMiniMax
+namespace MultiThreadedMiniMaxReworked
 {
     public class MultiThreadedAlgorithm
     {

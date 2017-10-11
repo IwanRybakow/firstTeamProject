@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5E20B23-9C33-4BEA-BF2D-31C2C8F3FBE7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Tictactoe</RootNamespace>
-    <AssemblyName>Tictactoe</AssemblyName>
+    <ProjectGuid>{EF013BA9-4BB9-4206-B6B3-41B70DEBCCF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Algorithm</RootNamespace>
+    <AssemblyName>Algorithm</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,25 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AlphaBetaMiniMax.cs" />
+    <Compile Include="Pattern.cs" />
+    <Compile Include="MiniMax.cs" />
+    <Compile Include="PatternCollection.cs" />
+    <Compile Include="PatternUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BattleField\BattleField.csproj">
-      <Project>{b6cf0055-e139-4d8d-a249-715198dc97a0}</Project>
-      <Name>BattleField</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HumanPlayer\HumanPlayer.csproj">
-      <Project>{aba3e76c-1120-4414-a652-46e95c84da53}</Project>
-      <Name>HumanPlayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MiniMaxSolution\MiniMaxSolution.csproj">
-      <Project>{5a9445da-1219-4f0d-99cd-fae857e994b5}</Project>
-      <Name>MiniMaxSolution</Name>
-    </ProjectReference>
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

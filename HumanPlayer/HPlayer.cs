@@ -15,9 +15,9 @@ namespace HumanPlayer
         {
             Identificator = Id;
         }
-        public byte[] NextMove(byte[,] currentState, byte[] OppMove)
+        public byte[] NextMove(byte[,] currentState, byte maxInRow)
         {
-            Console.WriteLine("Please enter coordinates of your next move");
+            Console.WriteLine("Please enter coordinates of your next move ");
             string move = Console.ReadLine();
             string[] coordinates = move.Split(' ');
 
