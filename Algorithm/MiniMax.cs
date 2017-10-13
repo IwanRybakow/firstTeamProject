@@ -58,25 +58,7 @@ namespace Algorithm
              
         }
 
-        public byte[] InstantMove (byte[,] board)
-        {
-            Dictionary<byte[], int> scores = new Dictionary<byte[], int>();
-            HashSet<byte[]> cellsToCheckList = Utils.FindMoves(board);
-            Parallel.ForEach(cellsToCheckList, cell =>
-            {
-                int score = Evaluate((byte[,])board.Clone(), cell, 1);
-                lock (scores)
-                {
-                    scores.Add(cell, score);
-                }
-            });
-            var item = (from entry in scores orderby entry.Value descending select entry).FirstOrDefault();
-            if (item.Value > 4300000)
-            {
-                return item.Key;
-            }
-            else return null;
-        }
+
 
         public int Evaluate(byte[,] board, byte[] move, byte sign)
         {
